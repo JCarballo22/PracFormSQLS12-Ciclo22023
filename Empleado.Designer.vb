@@ -37,14 +37,14 @@ Partial Class Empleado
         '
         'tbNombre
         '
-        Me.tbNombre.Location = New System.Drawing.Point(298, 114)
+        Me.tbNombre.Location = New System.Drawing.Point(168, 74)
         Me.tbNombre.Name = "tbNombre"
         Me.tbNombre.Size = New System.Drawing.Size(149, 20)
         Me.tbNombre.TabIndex = 0
         '
         'tbApellido
         '
-        Me.tbApellido.Location = New System.Drawing.Point(298, 170)
+        Me.tbApellido.Location = New System.Drawing.Point(168, 130)
         Me.tbApellido.Name = "tbApellido"
         Me.tbApellido.Size = New System.Drawing.Size(149, 20)
         Me.tbApellido.TabIndex = 1
@@ -52,7 +52,7 @@ Partial Class Empleado
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(207, 114)
+        Me.Label1.Location = New System.Drawing.Point(77, 74)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(44, 13)
         Me.Label1.TabIndex = 4
@@ -61,7 +61,7 @@ Partial Class Empleado
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(207, 170)
+        Me.Label2.Location = New System.Drawing.Point(77, 130)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(44, 13)
         Me.Label2.TabIndex = 5
@@ -70,7 +70,7 @@ Partial Class Empleado
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(207, 236)
+        Me.Label3.Location = New System.Drawing.Point(77, 196)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(31, 13)
         Me.Label3.TabIndex = 6
@@ -79,7 +79,7 @@ Partial Class Empleado
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(207, 290)
+        Me.Label4.Location = New System.Drawing.Point(77, 250)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(35, 13)
         Me.Label4.TabIndex = 7
@@ -87,7 +87,7 @@ Partial Class Empleado
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(169, 367)
+        Me.btnGuardar.Location = New System.Drawing.Point(39, 327)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
         Me.btnGuardar.TabIndex = 8
@@ -96,7 +96,7 @@ Partial Class Empleado
         '
         'btnCerrar
         '
-        Me.btnCerrar.Location = New System.Drawing.Point(502, 367)
+        Me.btnCerrar.Location = New System.Drawing.Point(372, 327)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(75, 23)
         Me.btnCerrar.TabIndex = 9
@@ -106,8 +106,8 @@ Partial Class Empleado
         'lbSexo
         '
         Me.lbSexo.FormattingEnabled = True
-        Me.lbSexo.Items.AddRange(New Object() {"M", "F"})
-        Me.lbSexo.Location = New System.Drawing.Point(298, 219)
+        Me.lbSexo.Items.AddRange(New Object() {" "})
+        Me.lbSexo.Location = New System.Drawing.Point(168, 179)
         Me.lbSexo.Name = "lbSexo"
         Me.lbSexo.Size = New System.Drawing.Size(22, 30)
         Me.lbSexo.TabIndex = 10
@@ -115,8 +115,7 @@ Partial Class Empleado
         'cbCargo
         '
         Me.cbCargo.FormattingEnabled = True
-        Me.cbCargo.Items.AddRange(New Object() {"Gerente", "Supervisor", "Vendedor", "Bodeguero", "Operario"})
-        Me.cbCargo.Location = New System.Drawing.Point(298, 282)
+        Me.cbCargo.Location = New System.Drawing.Point(168, 242)
         Me.cbCargo.Name = "cbCargo"
         Me.cbCargo.Size = New System.Drawing.Size(149, 21)
         Me.cbCargo.TabIndex = 11
@@ -126,7 +125,7 @@ Partial Class Empleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(473, 415)
         Me.Controls.Add(Me.cbCargo)
         Me.Controls.Add(Me.lbSexo)
         Me.Controls.Add(Me.btnCerrar)
