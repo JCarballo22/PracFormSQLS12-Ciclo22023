@@ -28,6 +28,8 @@ Partial Class Consulta
         Me.tbApellido = New System.Windows.Forms.TextBox()
         Me.tbSexo = New System.Windows.Forms.TextBox()
         Me.tbCargo = New System.Windows.Forms.TextBox()
+        Me.btnActualizar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'cbSeleccionar
@@ -55,6 +57,7 @@ Partial Class Consulta
         '
         'tbSexo
         '
+        Me.tbSexo.Enabled = False
         Me.tbSexo.Location = New System.Drawing.Point(60, 194)
         Me.tbSexo.Name = "tbSexo"
         Me.tbSexo.Size = New System.Drawing.Size(37, 20)
@@ -62,16 +65,37 @@ Partial Class Consulta
         '
         'tbCargo
         '
+        Me.tbCargo.Enabled = False
         Me.tbCargo.Location = New System.Drawing.Point(60, 239)
         Me.tbCargo.Name = "tbCargo"
         Me.tbCargo.Size = New System.Drawing.Size(134, 20)
         Me.tbCargo.TabIndex = 2
+        '
+        'btnActualizar
+        '
+        Me.btnActualizar.Location = New System.Drawing.Point(60, 283)
+        Me.btnActualizar.Name = "btnActualizar"
+        Me.btnActualizar.Size = New System.Drawing.Size(75, 23)
+        Me.btnActualizar.TabIndex = 3
+        Me.btnActualizar.Text = "Actualizar"
+        Me.btnActualizar.UseVisualStyleBackColor = True
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.Location = New System.Drawing.Point(186, 283)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEliminar.TabIndex = 4
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'Consulta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(360, 329)
+        Me.Controls.Add(Me.btnEliminar)
+        Me.Controls.Add(Me.btnActualizar)
         Me.Controls.Add(Me.tbCargo)
         Me.Controls.Add(Me.tbApellido)
         Me.Controls.Add(Me.tbSexo)
@@ -90,4 +114,6 @@ Partial Class Consulta
     Friend WithEvents tbApellido As TextBox
     Friend WithEvents tbSexo As TextBox
     Friend WithEvents tbCargo As TextBox
+    Friend WithEvents btnActualizar As Button
+    Friend WithEvents btnEliminar As Button
 End Class

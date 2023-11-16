@@ -45,5 +45,52 @@ Public Class Consulta
         End Try
     End Sub
 
+    Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
+        Dim mensajeError = ""
+        If tbNombre.Text = "" Then
+            mensajeError = mensajeError & "Falta Ingresar el Nombre"
+        End If
+        If tbApellido.Text = "" Then
+            mensajeError = mensajeError & "Falta Ingresar el Apellido"
+        End If
 
+        Try
+            Dim consulta = "Update Empleado 
+                            set Nombre ='" & tbNombre.Text & "', 
+                            Apellido = '" & tbApellido.Text & "'
+                            Where IdCodigo =" & cbSeleccionar.SelectedValue.ToString & ";"
+            Dim comando As New SqlCommand(consulta, conexion)
+            conexion.Open()
+            Dim leer = comando.ExecuteReader()
+            leer.Close()
+            MsgBox("Se ha actualizado con exito")
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        CargarSeleccion()
+        tbNombre.Text = ""
+        tbApellido.Text = ""
+        tbSexo.Text = ""
+        tbCargo.Text = ""
+
+    End Sub
+
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        Try
+            Dim consulta As New SqlCommand("Delete From Empleado 
+                                            Where IdCodigo = " & cbSeleccionar.SelectedValue.ToString & ";", conexion)
+            conexion.Open()
+            consulta.ExecuteNonQuery()
+            conexion.Close()
+            MsgBox("Se ha eliminado con exito")
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        CargarSeleccion()
+        tbNombre.Text = ""
+        tbApellido.Text = ""
+        tbSexo.Text = ""
+        tbCargo.Text = ""
+
+    End Sub
 End Class
