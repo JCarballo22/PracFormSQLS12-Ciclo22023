@@ -6,6 +6,7 @@ Public Class Empleado
     Dim conexion2 As New SqlConnection("Server=LAPTOP-ENVY-PC\SQLSERVER;DataBase=BDEmpresa; User Id=Carmen;Password=12345")
 
 
+
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Try
             Dim comando As New SqlCommand("Insert Into Empleado(Nombre,Apellido,sexo,Cargo) 
